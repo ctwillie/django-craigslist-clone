@@ -1,6 +1,5 @@
 ###### HEAD
 # Craigslist Django Clone
-____________________________________
 
 A craigslist clone web application built using Django.
 
