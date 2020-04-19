@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+###### HEAD
 # Craigslist Django Clone
 ____________________________________
 
@@ -12,6 +12,4 @@ A craigslist clone web application built using Django.
 ###### Frontend
 - [Bootstrap 4](https://getbootstrap.com/)
 - [React](https://reactjs.org/)
-=======
-A craigslist clone web application built using Django.
->>>>>>> 00189126d71d39132a2b63a6858d865b98ef9335
+
