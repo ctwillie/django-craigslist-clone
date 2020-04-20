@@ -12,6 +12,7 @@ python-dotenv = "*"
 pylint-django = "*"
 psycopg2 = "*"
 autopep8 = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"

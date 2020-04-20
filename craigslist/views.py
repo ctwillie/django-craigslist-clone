@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import requests
 
 def project_home(request):
     """Go to index route, return home template"""
@@ -15,10 +15,13 @@ def new_search(request):
 
 def search_results(request):
     """Send search results"""
+    base_url = 'https://jacksonville.craigslist.org/search/sss?query={}'
     try:
         search_terms = request.POST['search-terms']
     except KeyError:
-        results = None
+        search_terms = 'python tutor'
     else:
-        results = search_terms
+        results = requests.get(base_url.format(search_terms))
+        print(results.content)
+        results = '123456'
         return render(request, 'craigslist/search-results.html', {'search_results': results})
