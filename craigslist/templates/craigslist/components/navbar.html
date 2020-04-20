@@ -1,0 +1,33 @@
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{% url 'craigslist:home' %}">
+        <span class="icon is-medium">
+            <i class="fas fa-shopping-cart"></i>
+        </span>
+        <h1 class="has-text-primary is-size-4 has-text-weight-semibold	">Craigslist Clone</h1>
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="{% url 'craigslist:new_search' %}" class="navbar-item">
+        Search
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a href="{% url 'craigslist:home' %}" class="button is-light">
+          Home
+        </a>
+      </div>
+    </div>
+  </div>
+  
+</nav>

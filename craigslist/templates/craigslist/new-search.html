@@ -1,0 +1,44 @@
+{% extends 'craigslist/layouts/base.html' %}
+
+{% block content%}
+    
+    <!-- title -->
+    <section class="section">
+        <div class="has-text-centered">
+            <h3 class="title">What are you looking to purchase?</h3>
+            <p class="subtitle is-size-6">Enter search terms for items you want to see.</p>
+        </div>
+    </section>
+    
+    <!-- Search Form -->
+    <section>
+        <form action="{% url 'craigslist:search_results' %}" method="post">
+            {% csrf_token %}
+            
+            <div class="columns is-centered">
+                <div class="column is-two-thirds">
+
+                    <!-- search text -->
+                    <div class="field">
+                        <div class="control has-icons-left has-icons-right">
+                            <input type="text" class="input is-primary" name="search-terms">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                        <p class="help is-dark">Enter terms you would like to search</p>
+                    </div>
+
+                    <!-- submit -->
+                    <div class="field is-pulled-right">
+                        <div class="control">
+                            <button type="submit" class="button is-light">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+{% endblock %}

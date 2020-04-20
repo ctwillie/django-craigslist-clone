@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "C:\\Users\\Admin\\.virtualenvs\\craigslist-clone-GaGAQ0fu\\Scripts\\python.exe",
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--disable=C0111",
+        "--disable=too-many-ancestors"
+    ],
+    "[python]": {
+        "editor.formatOnPaste": true
+    }
+}

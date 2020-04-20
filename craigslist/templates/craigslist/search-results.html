@@ -1,0 +1,11 @@
+{% extends 'craigslist/layouts/base.html' %}
+
+{% block content %}
+
+{% if searched_for %}
+    <p>You search for: {{searched_for}}</p>
+{% else %}
+    <p>You did't enter any search terms</p>
+{% endif %}
+
+{% endblock content %}
