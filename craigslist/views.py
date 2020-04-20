@@ -15,5 +15,10 @@ def new_search(request):
 
 def search_results(request):
     """Send search results"""
-    search_terms = request.POST['search-terms']
-    return render(request, 'craigslist/search-results.html', {'searched_for':search_terms})
+    try:
+        search_terms = request.POST['search-terms']
+    except KeyError:
+        results = None
+    else:
+        results = search_terms
+        return render(request, 'craigslist/search-results.html', {'search_results': results})
